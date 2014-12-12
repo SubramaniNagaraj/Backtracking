@@ -9,7 +9,7 @@ bool is_a_solution(int k, int n) {
 }
 
 void insert_swap(char a[], int k, int n) {
-    char temp[10] = {0};
+    char temp[NMAX] = {0};
 
     if(is_a_solution(k, n)) return;
 

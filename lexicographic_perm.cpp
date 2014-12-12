@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 #define NMAX 100
 
-/* Permutations in lexicographic order. */
+/*  Permutations in lexicographic order. 
+    A string of length n has n! permutation. */
 
 bool is_a_solution(int k, int n) {
     return k == n;

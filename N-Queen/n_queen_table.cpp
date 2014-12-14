@@ -7,7 +7,6 @@ int a[NMAX][NMAX];
 bool is_a_solution(int k, int n) {
     return k == n;
 }
-
 /* A utility function to print solution */
 void process_solution(int n) {
     for(int i = 0; i < n; i++) {
@@ -34,6 +33,14 @@ bool conflict(int row, int col, int n) {
     /* Check lower diagonal on left side */
     for(int i = row, j = col; j >= 0 && i < n; i++, j--)
         if(a[i][j]) return false;
+
+    /*
+    for(int i = row, j = col; i >= 0 && j < n; i--, j++)
+        if(a[i][j]) return false;
+
+    for(int i = row, j = col; j >= 0; i++, j--)
+        if(a[i][j]) return false;
+    */
 
     return true;
 }

@@ -1,13 +1,23 @@
 #include <bits/stdc++.h>
 #define NMAX 100
 
+/*  The N Queen is the problem of placing N chess queens on an NxN chessboard
+    so that no two queens attack each other.
+
+    For example, n = 4:
+
+    { 0,  1,  0,  0}
+    { 0,  0,  0,  1}
+    { 1,  0,  0,  0}
+    { 0,  0,  1,  0}*/
+
 int n, qtd_solution;
 int a[NMAX][NMAX];
 
 bool is_a_solution(int k, int n) {
     return k == n;
 }
-/* A utility function to print solution */
+/*  A utility function to print solution */
 void process_solution(int n) {
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < n; j++) printf("%d ", a[i][j]);

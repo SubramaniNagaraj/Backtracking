@@ -70,6 +70,21 @@ bool solveMazeUtil(int x, int y) {
             return true;
         */
 
+        /*  For all movements except diagonal, replace by:
+
+        if (solveMazeUtil(x+1, y) == true)
+            return true;
+
+        if (solveMazeUtil(x, y+1) == true)
+            return true;
+
+        if (solveMazeUtil(x, y-1) == true)
+            return true;
+
+        if (solveMazeUtil(x-1, y) == true)
+            return true;
+        */
+
         /*  If none of the above movements work then BACKTRACK:
             unmark x,y as part of solution path */
         sol[x][y] = 0;
